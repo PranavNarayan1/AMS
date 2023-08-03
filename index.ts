@@ -1,5 +1,5 @@
 import express, { NextFunction } from 'express';
-import dotenv from 'dotenv'
+import * as dotenv from 'dotenv'
 //database importing
 
 import {redFun}from './src/db/redis'
@@ -18,8 +18,8 @@ import makeBid from './src/router/user-Activity/makeBid';
 //All constant decleration
 
 const app=express()
-const port=process.env.PORT;
 dotenv.config();
+const port=process.env.PORT;
 app.use(express.json())
 
 //Routers
@@ -46,7 +46,7 @@ redFun();
 // app.use((_err : Error,_req:Request,res:Response ,_next:()=>void)=>
 //     res.json('')
 // })
-
+console.log('123123213', port)
 app.listen(port,()=>{
     console.log(`Listen to the port ${port}`)
 })

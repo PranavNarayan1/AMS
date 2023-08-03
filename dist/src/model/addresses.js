@@ -18,7 +18,7 @@ exports.addressSchema = database_1.default.define('address', {
         onDelete: 'CASCADE'
     },
     house_no: {
-        type: sequelize_typescript_1.DataType.STRING
+        type: sequelize_typescript_1.DataType.STRING,
     },
     street_no: {
         type: sequelize_typescript_1.DataType.STRING
